@@ -306,4 +306,8 @@ select {
   background-color: #333; 
   color: #fff;
 }
+.dark-mode .see {
+  background-color:white; 
+  color:black;
+}
 

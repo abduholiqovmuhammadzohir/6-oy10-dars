@@ -62,7 +62,7 @@ function App() {
               <p>{t('text')}</p>
               <div className="btn">
                 <button className='he'>{t("mee")}</button>
-                <button className='see'>{t('see')}</button>
+                <button className={`see ${darkMode ? 'dark-mode' : ''}`}>{t('see')}</button>
               </div>
             </div>
             <div className='right'>
