@@ -20,6 +20,7 @@
   padding-right: 90px;
   padding-top: 50px;
   padding-bottom: 0px;
+  width: 750px;
 }
 
 .glow-on-hover {
@@ -97,16 +98,18 @@
   border-right: 50px solid #FF9442;
   border-top: 50px solid #FF9442;
   padding: 50px;
+  width: 750px;
+  box-sizing:border-box;
   padding-left: 100px;
   padding-bottom:0px;
 }
 
 nav ul {
   display: flex;
-  font-size: 26px;
+  font-size: 25px;
   font-weight: 600;
   line-height: 35px;
-  gap: 40px;
+  gap: 30px;
   list-style: none;
   cursor: pointer;
   color: #000000;
@@ -139,11 +142,12 @@ select {
 
 .left .btn {
   margin-top: 60px;
+  
 }
 
 .left .btn button {
   font-family: Roboto;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   padding: 20px;
@@ -157,7 +161,6 @@ select {
   background: #111;
   cursor: pointer;
   position: relative;
-  z-index: 0;
   margin-bottom: 80px;
   cursor: pointer;
 }

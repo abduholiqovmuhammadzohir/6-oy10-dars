@@ -1,0 +1,41 @@
+{
+    "en": {
+        "translation": {
+            "about": "About",
+            "skill": "Skills",
+            "project": "Project",
+            "contact": "Contact",
+            "me":"Hi 👋 I’m Charles, Front-end Developer ",
+            "text":"I design and develop experiences that make people’s lives simpler through Web and Mobile apps.I work with FIgma  HTML5, CSS3, JavaScript, React, ReactNative and Flutter.",
+            "dark":"Dark/Light",
+            "mee":"HIRE ME",
+            "see":"SEE MY PROJECTS"
+        }
+    },
+    "ru": {
+        "translation": {
+            "about": "Обо мне",
+            "skill": "Навыки",
+            "project": "Проект",
+            "contact": "Контакт",
+            "me":"«Привет 👋 ЯЧарльз фронтенд-разработчик",
+            "text":"Я проектирую и развиваю опыт, который делает жизнь людей проще через веб-приложения и мобильные приложения. Я работаю с Figma., HTML5, CSS3, JavaScript, React, ReactNative и Flutter.",
+            "dark":"Темный",
+            "mee":"НАЙМИ",
+            "see":"ПОСМОТРЕТЬ ПРОЕКТЫ" 
+        }
+    },
+    "uz": {
+        "translation": {
+            "about": "Haqida",
+            "skill": "Ko'nikma",
+            "project": "Loyiha",
+            "contact": "Aloqa",
+            "me":"Salom 👋 Men Charlz, Front-end Developer",
+            "text": "Men odamlarning hayotini o'zgartiradigan tajribalarni ishlab chiqaman va ishlab chiqaman Veb va mobil ilovalar orqali oddiyroq. Men FIgma bilan ishlayman HTML5, CSS3, JavaScript, React, ReactNative va Flutter.",
+            "dark":"Qorong'i",
+            "mee":"ISHLASH",
+            "see":"LOYIHALARIMNI KOʻRING"
+        }
+    }
+}

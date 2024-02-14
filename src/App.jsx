@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { useTranslation } from 'react-i18next';
 import picture from "./Img/img.png"
 
 function App() {
+
+  const[lang, setLang] = useState('en')
+
+  const { t, i18n } = useTranslation();
+
   const [loader, setLoader] = useState(true)
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem('darkMode');
@@ -27,35 +33,49 @@ function App() {
     document.documentElement.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
 
+  useEffect(() => {
+    let lang = localStorage.getItem('lang')
+
+    if (lang) {
+      i18n.changeLanguage(lang)
+      setLang(lang)
+    }
+
+  }, [])
+
+  function handleChangeLang(e) {
+    setLang(e.target.value);
+    i18n.changeLanguage(e.target.value)
+    localStorage.setItem('lang', e.target.value)
+  }
+
   return (
     <>
       {
         !loader ? (
           <div className={`container ${darkMode ? 'dark-mode' : ''}`}>
             <div className="left">
-              <button className="glow-on-hover" onClick={toggleMode}>Dark/Light</button>
+              <button className="glow-on-hover" onClick={toggleMode}>{t("dark")}</button>
               <h1>
-                Hi 👋<br />
-                I’m Charles, <br />
-                Front-end Developer <br />
+                {t('me')}
               </h1>
-              <p>I design and develop experiences that make people’s lives <br /> simpler through Web and Mobile apps.I work with FIgma <br /> , HTML5, CSS3, JavaScript, React, ReactNative and Flutter.</p>
+              <p>{t('text')}</p>
               <div className="btn">
-                <button className='he'>HIRE ME</button>
-                <button className='see'>SEE MY PROJECTS</button>
+                <button className='he'>{t("mee")}</button>
+                <button className='see'>{t('see')}</button>
               </div>
             </div>
             <div className='right'>
               <nav className={darkMode ? 'dark-mode' : ''}> {}
                 <ul>
-                  <li>About Me</li>
-                  <li>Skills</li>
-                  <li>Project</li>
-                  <li>Contact</li>
-                  <select>
-                    <option value="uz">uz</option>
+                  <li>{t('about')}</li>
+                  <li>{t('skill')}</li>
+                  <li>{t('project')}</li>
+                  <li>{t('contact')}</li>
+                  <select onChange={handleChangeLang} value={lang}>
                     <option value="en">en</option>
                     <option value="ru">ru</option>
+                    <option value="uz">uz</option>
                   </select>
                 </ul>
               </nav>
